@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">zakuStore</string>
+    <string name="home">Home</string>
+    <string name="insert">Insertar</string>
+    <string name="update">Actualizar</string>
+    <string name="delete">Borrar</string>
+    <string name="model">Modelo</string>
+    <string name="nick">Apodo</string>
+    <string name="photo">Fotografia</string>
+    <string name="save">Guardar</string>
+</resources>

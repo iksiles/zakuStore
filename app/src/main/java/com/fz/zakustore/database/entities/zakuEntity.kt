@@ -15,7 +15,7 @@ data class zakuEntity(
     @ColumnInfo(name = "photo") val photo: String
 )
 
-@Entity(tableName = "Team_Table", foreignKeys = [ForeignKey(entity = teamEntity::class, parentColumns = ["teamid"], childColumns = ["teamid"], onDelete = ForeignKey.CASCADE)])
+@Entity(tableName = "Team_Table", foreignKeys = [ForeignKey(entity = teamEntity::class, parentColumns = ["teamid"], childColumns = ["teamid"], onDelete = ForeignKey.NO_ACTION)])
 data class teamEntity(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "teamid") val teamid: Int

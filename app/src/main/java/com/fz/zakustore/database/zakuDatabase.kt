@@ -7,7 +7,7 @@ import com.fz.zakustore.database.dao.zakuDao
 import com.fz.zakustore.database.entities.teamEntity
 import com.fz.zakustore.database.entities.zakuEntity
 
-@Database(entities = [zakuEntity::class, teamEntity::class], version = 4, exportSchema = false)
+@Database(entities = [zakuEntity::class, teamEntity::class], version = 5, exportSchema = false)
 
 abstract class zakuDatabase: RoomDatabase() {
 

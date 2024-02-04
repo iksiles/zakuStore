@@ -25,18 +25,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         db = Room.databaseBuilder(this, zakuDatabase::class.java, "zakuStore_db").fallbackToDestructiveMigration().build()
-        lifecycleScope.launch {
+/*        lifecycleScope.launch {
+            db.teamDao().insertTeam(teamEntity(0))
+            db.teamDao().insertTeam(teamEntity(1))
             val zakus = listOf<zakuEntity>(
                 zakuEntity(1,"MS-05B", "Zaku I", 1, "https://static.wikia.nocookie.net/gundam/images/3/35/MS05B_Zaku_I_-_Front.jpg/revision/latest?cb=20111115230150"),
                 zakuEntity(2,"MS-06F", "Zaku II", 1, "https://static.wikia.nocookie.net/gundam/images/8/8d/Ms-06f.jpg/revision/latest?cb=20140902160701"),
                 zakuEntity(3,"MS-07B", "Gouf", 1, "https://static.wikia.nocookie.net/gundam/images/d/d1/Ms-07b_1.jpg/revision/latest/scale-to-width-down/1000?cb=20201101133303")
             )
             db.zakuDao().insertAll(zakus)
-        }
-/*        lifecycleScope.launch {
-            db.teamDao().insertTeam(teamEntity(0))
-            db.teamDao().insertTeam(teamEntity(1))
         }*/
+
 /*        lifecycleScope.launch {
             db.zakuDao().insertZakuAndTeam(zakuEntity(1,"MS-05B", "Zaku I", 1, "https://static.wikia.nocookie.net/gundam/images/3/35/MS05B_Zaku_I_-_Front.jpg/revision/latest?cb=20111115230150"),
                 teamEntity(1,1)
